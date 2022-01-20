@@ -1,4 +1,4 @@
-package hc_dayoftheprogrammer;
+package hacker_rank.dayoftheprogrammer;
 /**
  * HcDayOfTheProgrammer
  * 
