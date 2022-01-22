@@ -1,14 +1,6 @@
-package hacker_rank.dayoftheprogrammer;
-/**
- * HcDayOfTheProgrammer
- * 
- * 
- * 
- * 
- */
 import java.util.Scanner;
 
-public class Main {
+class Solution {
     public static void main(String[] args) {
         try (Scanner inp = new Scanner(System.in)) {
             int tahun = inp.nextInt();
