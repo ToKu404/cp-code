@@ -29,12 +29,14 @@ class Solution {
             }
         }
 
-        int maxSum = max;
-        int minSum = min;
+        long maxSum = 0, minSum = 0;
         for (int i = 0; i < numeric.length; i++) {
-            if(i != indexMax && i != indexMin){
-                maxSum += numeric[i];
+            
+            if(i!=indexMax){
                 minSum += numeric[i];
+            }
+            if(i!=indexMin){
+                maxSum += numeric[i];
             }
         }
         System.out.println(minSum +  " " + maxSum);
