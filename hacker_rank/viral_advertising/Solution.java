@@ -19,4 +19,5 @@ class Solution {
         System.out.println(cum);
 
     }
+   
 }
