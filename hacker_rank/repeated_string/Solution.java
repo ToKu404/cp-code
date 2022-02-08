@@ -15,21 +15,21 @@ class Solution {
     }
 
     private static void repeatedString(String str, BigInteger repeat) {
-        BigInteger r = repeat.divide(BigInteger.valueOf(str.length()));
-        BigInteger containtA = BigInteger.valueOf(0);
+        BigInteger r = repeat.divide(BigInteger.valueOf(str.length())); //* repeat / str.length()
+        BigInteger containtA = BigInteger.valueOf(0); //* containtA = 0
         for (int i = 0; i < str.length(); i++) {
-            if(str.substring(i,i+1).equalsIgnoreCase("a"))
+            if(str.substring(i,i+1).equalsIgnoreCase("a")) 
             {
-                containtA = containtA.add(BigInteger.ONE);
+                containtA = containtA.add(BigInteger.ONE); //* containtA ++
             }
         }
-        containtA = containtA.multiply(r);
+        containtA = containtA.multiply(r); //* containtA*=r
     
         int re = repeat.mod(BigInteger.valueOf(str.length())).intValue();
         for (int i = 0; i < re; i++) {
             if(str.substring(i,i+1).equalsIgnoreCase("a"))
             {
-                containtA = containtA.add(BigInteger.ONE);
+                containtA = containtA.add(BigInteger.ONE); //* containtA++
             }
         }
         System.out.println(containtA);
