@@ -13,7 +13,7 @@ class Solution {
             }
         }
 
-        taumBday2(num);
+        taumBday(num);
 
         inp.close();
     }
