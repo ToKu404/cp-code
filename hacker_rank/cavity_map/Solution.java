@@ -25,8 +25,6 @@ class Solution {
     }
 
     private static void cavityMap(int[][] map) {
-        // int temp[][] = map.clone();
-
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map.length; j++) {
                 boolean isCavity = false;
@@ -36,7 +34,6 @@ class Solution {
                     boolean rightSide = map[i-1][j]<map[i][j];
                     boolean topSide = map[i][j-1]<map[i][j];
                     if(leftSide&&bottomSide&&rightSide&&topSide){
-                        // map[i][j] = -1;
                         isCavity = true;
                     }
                 }
