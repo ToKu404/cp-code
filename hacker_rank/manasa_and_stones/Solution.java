@@ -16,7 +16,7 @@ class Solution {
             if(differenceNum[i][0]>differenceNum[i][1]){
                 int temp = differenceNum[i][1];
                 differenceNum[i][1] = differenceNum[i][0];
-                differenceNum[i][1] = temp;
+                differenceNum[i][0] = temp;
             }
         }
 
@@ -26,22 +26,23 @@ class Solution {
     }
 
     private static void manasaStone(int[] countStone, int[][] differenceNum) {
-        int permutationCount[] = new int[countStone.length];
-        for (int i = permutationCount.length; i > 2; i--) {
-            permutationCount[i]*=i;
-        }
-
-
-
+        
+    
         for (int i = 0; i < countStone.length; i++) {
-            int j = 0;
-            while (j<permutationCount[i]){
-                int last = 0;
-                int l = 0;
-                for (int k = 0; k < countStone[i]-1; k++) {
-                    last+=countStone[l];
+            if(differenceNum[i][0]==differenceNum[i][1]){
+                System.out.print(differenceNum[i][0]*(countStone[i]-1));
+            }
+            else{
+                int useB = 0;
+                int useA = countStone[i]-1;
+                for (int j = 0; j < countStone[i]; j++) {
+                    int lastVal = useA * differenceNum[i][0] + useB * differenceNum[i][1];
+                    System.out.print(lastVal + " ");
+                    useB++;
+                    useA--;
                 }
             }
+            System.out.println();
         }
     }
 }
