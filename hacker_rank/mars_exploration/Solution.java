@@ -24,4 +24,12 @@ class Solution {
         }
         System.out.println(difference);
     }
+    public static void marsExploration2(String text) {
+        String sos = "SOS";
+        int count = 0;
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) != sos.charAt(i % 3)) count++;
+        }
+        System.out.println(count);
+    }
 }
