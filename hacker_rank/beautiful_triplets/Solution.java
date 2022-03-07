@@ -13,6 +13,10 @@ class Solution {
 
         beautifulTriplets(num, d);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 017175bb3fcd7aaa39a8bae221cff0e6820e9a54
         inp.close();
     }
 
